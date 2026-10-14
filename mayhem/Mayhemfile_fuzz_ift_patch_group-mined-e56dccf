@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/fontations/fuzz_ift_patch_group
+project: savantenvs/fontations
+target: fuzz_ift_patch_group-mined-e56dccf
+cmds:
+  - cmd: /mayhem/fuzz_ift_patch_group
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ift_patch_group-mined-e56dccf/testsuite
